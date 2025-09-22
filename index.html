@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Core - Rekomendasi Laptop AI untuk Mahasiswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'oklch(0.02 0.02 240)',
+                        foreground: 'oklch(0.98 0.01 240)',
+                        card: 'oklch(0.05 0.02 240)',
+                        'card-foreground': 'oklch(0.98 0.01 240)',
+                        primary: 'oklch(0.75 0.3 240)',
+                        'primary-foreground': 'oklch(0.02 0.02 240)',
+                        secondary: 'oklch(0.65 0.25 220)',
+                        'secondary-foreground': 'oklch(0.02 0.02 240)',
+                        muted: 'oklch(0.08 0.02 240)',
+                        'muted-foreground': 'oklch(0.65 0.05 240)',
+                        accent: 'oklch(0.85 0.35 200)',
+                        'accent-foreground': 'oklch(0.02 0.02 240)',
+                        border: 'oklch(0.15 0.05 240)',
+                        input: 'oklch(0.08 0.02 240)',
+                        ring: 'oklch(0.75 0.3 240 / 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-card/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center neon-glow">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold neon-text">Study Core</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-foreground hover:text-primary transition-colors duration-300">Beranda</a>
+                    <a href="#rekomendasi" class="text-muted-foreground hover:text-primary transition-colors duration-300">Rekomendasi</a>
+                    <a href="#perbandingan" class="text-muted-foreground hover:text-primary transition-colors duration-300">Perbandingan</a>
+                    <a href="#tentang" class="text-muted-foreground hover:text-primary transition-colors duration-300">Tentang</a>
+                </div>
+                <button class="md:hidden text-foreground">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-primary/10 via-background to-accent/10 py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,oklch(0.65_0.25_240_/_0.1),transparent_70%)]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 slide-in">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-7xl font-bold text-foreground mb-6">
+                        Temukan Laptop <span class="text-primary neon-text">Impian</span> dengan
+                        <span class="text-accent neon-text">Study Core</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
+                        Platform AI terdepan yang membantu mahasiswa menemukan laptop perfect match berdasarkan jurusan, budget,
+                        dan kebutuhan spesifik dengan akurasi tinggi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <button onclick="showRecommendationForm()" class="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-8 rounded-lg text-lg font-semibold neon-glow hover:scale-105 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            Mulai Pencarian AI
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </button>
+                        <button class="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-10 py-8 rounded-lg text-lg font-semibold neon-border hover:scale-105 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                            Lihat Demo Interaktif
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-20 right-10 opacity-20">
+                <svg class="w-32 h-32 text-primary float-animation" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 bg-card/50 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center interactive-card p-6 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-3 neon-text">5,000+</div>
+                        <div class="text-muted-foreground text-lg">Laptop Database</div>
+                    </div>
+                    <div class="text-center interactive-card p-6 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-3 neon-text">25,000+</div>
+                        <div class="text-muted-foreground text-lg">Mahasiswa Aktif</div>
+                    </div>
+                    <div class="text-center interactive-card p-6 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-3 neon-text">75+</div>
+                        <div class="text-muted-foreground text-lg">Jurusan Supported</div>
+                    </div>
+                    <div class="text-center interactive-card p-6 rounded-xl">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-3 neon-text">98.5%</div>
+                        <div class="text-muted-foreground text-lg">Akurasi AI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                        Mengapa <span class="text-primary neon-text">Study Core</span> Berbeda?
+                    </h2>
+                    <p class="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+                        Teknologi AI terdepan dengan pengalaman user yang tak tertandingi
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center interactive-card neon-border bg-card/80 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="mx-auto w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 neon-glow">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl text-foreground font-semibold mb-4">AI Super Cerdas</h3>
+                        <p class="text-base text-muted-foreground">Algoritma machine learning yang menganalisis 50+ parameter untuk rekomendasi terpersonalisasi</p>
+                    </div>
+
+                    <div class="text-center interactive-card neon-border bg-card/80 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="mx-auto w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 neon-glow">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Perbandingan Real-time</h3>
+                        <p class="text-base text-muted-foreground">Bandingkan performa, harga, dan review dari ribuan laptop dengan visualisasi interaktif</p>
+                    </div>
+
+                    <div class="text-center interactive-card neon-border bg-card/80 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="mx-auto w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 neon-glow">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Data Terpercaya</h3>
+                        <p class="text-base text-muted-foreground">Database terintegrasi dengan 100+ toko online untuk informasi harga dan stok terkini</p>
+                    </div>
+
+                    <div class="text-center interactive-card neon-border bg-card/80 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="mx-auto w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 neon-glow">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Pengalaman Premium</h3>
+                        <p class="text-base text-muted-foreground">Interface modern dengan teknologi terdepan untuk pengalaman pencarian yang tak terlupakan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Majors Section -->
+        <section class="py-24 bg-card/30 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">Jurusan Trending</h2>
+                    <p class="text-xl md:text-2xl text-muted-foreground">
+                        Eksplorasi rekomendasi laptop untuk jurusan paling populer
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="interactive-card neon-border bg-card/80 backdrop-blur-sm cursor-pointer p-6 rounded-xl">
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Teknik Informatika</h3>
+                        <span class="inline-block bg-blue-500/20 text-blue-300 border border-blue-500/30 px-3 py-1 rounded-full text-sm mb-4">2,450 mahasiswa</span>
+                        <button class="w-full bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300">
+                            Eksplorasi Sekarang
+                        </button>
+                    </div>
+
+                    <div class="interactive-card neon-border bg-card/80 backdrop-blur-sm cursor-pointer p-6 rounded-xl">
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Desain Grafis</h3>
+                        <span class="inline-block bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-sm mb-4">1,890 mahasiswa</span>
+                        <button class="w-full bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300">
+                            Eksplorasi Sekarang
+                        </button>
+                    </div>
+
+                    <div class="interactive-card neon-border bg-card/80 backdrop-blur-sm cursor-pointer p-6 rounded-xl">
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Akuntansi</h3>
+                        <span class="inline-block bg-green-500/20 text-green-300 border border-green-500/30 px-3 py-1 rounded-full text-sm mb-4">1,650 mahasiswa</span>
+                        <button class="w-full bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300">
+                            Eksplorasi Sekarang
+                        </button>
+                    </div>
+
+                    <div class="interactive-card neon-border bg-card/80 backdrop-blur-sm cursor-pointer p-6 rounded-xl">
+                        <h3 class="text-xl text-foreground font-semibold mb-4">Arsitektur</h3>
+                        <span class="inline-block bg-orange-500/20 text-orange-300 border border-orange-500/30 px-3 py-1 rounded-full text-sm mb-4">1,200 mahasiswa</span>
+                        <button class="w-full bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:scale-105 transition-all duration-300">
+                            Eksplorasi Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,oklch(0.65_0.25_240_/_0.2),transparent_70%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,oklch(0.75_0.30_200_/_0.2),transparent_70%)]"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 class="text-4xl md:text-6xl font-bold text-foreground mb-8 neon-text">
+                    Siap Upgrade Pengalaman Belajar?
+                </h2>
+                <p class="text-xl md:text-2xl text-muted-foreground mb-12">
+                    Dapatkan rekomendasi laptop AI-powered dalam hitungan detik
+                </p>
+                <button onclick="showRecommendationForm()" class="inline-flex items-center gap-4 bg-primary text-primary-foreground px-12 py-10 rounded-lg text-xl font-semibold neon-glow hover:scale-110 transition-all duration-500">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Mulai Journey Anda
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recommendation Form Modal -->
+    <div id="recommendationModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden">
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-card rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto neon-border">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-foreground neon-text">Temukan Laptop Perfect Match</h2>
+                    <button onclick="hideRecommendationForm()" class="text-muted-foreground hover:text-foreground">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="recommendationForm" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">Jurusan Kuliah</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih jurusan Anda</option>
+                                <option value="teknik-informatika">Teknik Informatika</option>
+                                <option value="desain-grafis">Desain Grafis</option>
+                                <option value="akuntansi">Akuntansi</option>
+                                <option value="arsitektur">Arsitektur</option>
+                                <option value="kedokteran">Kedokteran</option>
+                                <option value="hukum">Hukum</option>
+                                <option value="ekonomi">Ekonomi</option>
+                                <option value="psikologi">Psikologi</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">Budget Range</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih budget Anda</option>
+                                <option value="5-10">Rp 5 - 10 Juta</option>
+                                <option value="10-15">Rp 10 - 15 Juta</option>
+                                <option value="15-20">Rp 15 - 20 Juta</option>
+                                <option value="20-30">Rp 20 - 30 Juta</option>
+                                <option value="30+">Rp 30 Juta+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">Storage (GB)</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih kapasitas storage</option>
+                                <option value="256">256 GB SSD</option>
+                                <option value="512">512 GB SSD</option>
+                                <option value="1024">1 TB SSD</option>
+                                <option value="2048">2 TB SSD</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">RAM</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih kapasitas RAM</option>
+                                <option value="8">8 GB</option>
+                                <option value="16">16 GB</option>
+                                <option value="32">32 GB</option>
+                                <option value="64">64 GB</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">GPU</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih tipe GPU</option>
+                                <option value="integrated">Integrated Graphics</option>
+                                <option value="gtx-1650">NVIDIA GTX 1650</option>
+                                <option value="rtx-3050">NVIDIA RTX 3050</option>
+                                <option value="rtx-4060">NVIDIA RTX 4060</option>
+                                <option value="rtx-4070">NVIDIA RTX 4070</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-3">CPU</label>
+                            <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Pilih tipe CPU</option>
+                                <option value="intel-i5">Intel Core i5</option>
+                                <option value="intel-i7">Intel Core i7</option>
+                                <option value="intel-i9">Intel Core i9</option>
+                                <option value="amd-ryzen5">AMD Ryzen 5</option>
+                                <option value="amd-ryzen7">AMD Ryzen 7</option>
+                                <option value="amd-ryzen9">AMD Ryzen 9</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-3">Ukuran Layar</label>
+                        <select class="w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">Pilih ukuran layar</option>
+                            <option value="13">13 inch</option>
+                            <option value="14">14 inch</option>
+                            <option value="15">15.6 inch</option>
+                            <option value="16">16 inch</option>
+                            <option value="17">17 inch</option>
+                        </select>
+                    </div>
+
+                    <div class="flex gap-4 pt-6">
+                        <button type="submit" class="flex-1 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold neon-glow hover:scale-105 transition-all duration-300">
+                            Cari Rekomendasi AI
+                        </button>
+                        <button type="button" onclick="hideRecommendationForm()" class="px-8 py-4 border border-border rounded-lg text-foreground hover:bg-muted transition-colors">
+                            Batal
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
